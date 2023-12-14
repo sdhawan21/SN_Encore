@@ -1,0 +1,63 @@
+# models from Blondin et al. (2017), MNRAS, 470, 157:
+# "Evidence for sub-Chandrasekhar-mass progenitors of Type Ia
+# supernovae at the faint end of the width-luminosity relation"
+# (arXiv:1706.01901)
+
+########################################################################
+#								       #
+#		PLEASE REFERENCE BLONDIN ET AL. (2017)  	       #
+#								       #
+#	      IF YOU USE THESE RESULTS IN A PUBLICATION		       #
+#								       #
+########################################################################
+
+### EXPLOSION MODELS
+
+The hydrodynamical inputs correspond to 1.3 days post explosion (DDC
+series), 1.0 day post explosion (SCH series), and 1.1 days post
+explosion (PDDEL series) in the files named:
+
+<model>_hydro_<time>d.dat
+
+e.g., SCH2p0_hydro_001.000d.dat for the SCH2p0 model at 1.0 day post
+explosion. These files contain the ejecta structure of the converged
+CMFGEN model at that time (e.g., the temperature corresponds to the
+full non-LTE solution computed by CMFGEN).
+
+The file formats are the same as those used for the supernova
+radiative-transfer code-comparison initiative (StaNdaRT) of the
+SNRadTrans collaboration (Blondin et al. 2022b, A&A 668, A163; see
+https://github.com/sn-rad-trans/data1/tree/master/input_models).
+
+
+
+### SYNTHETIC SPECTRA
+
+Synthetic spectra are given at each time step between 1.3d and
+104.1d post explosion (DDC series; 47 spectra in total); between 1.0d
+and 107.55d (SCH series; 50 spectra in total); and between 1.1d and
+107.55d (PDDEL series; 50 spectra in total). For the PDDEL1 model the
+spectra are only given up until 55.18d post explosion, and for the
+PDDEL3 model only until 97.77d post explosion.
+
+All the spectra were binned on a 5-Angstrom scale between 2500 and
+25500 Angstroms (i.e., 4601 wavelengths) based on the original
+observer-frame calculation, which computes the flux at >80000
+wavelengths in the range 2500-25500 A.
+
+Each spectrum follows the naming convention:
+
+<model>_spec_2500_25500_bin5_<time>d.dat
+
+e.g., SCH2p0_spec_2500_25500_bin5_017.580d.dat is at 17.58 days post
+explosion. 
+
+The first column gives the (air) wavelength in Angstroms, the second
+column gives the corresponding flux at 10 pc in erg/s/cm^2/A (such
+that direct integration of the spectra using a given filter bandpass +
+corresponding zero point will yield the absolute magnitude in that
+filter).
+
+For further information, please contact:
+
+Stéphane Blondin (stephane.blondin@lam.fr)
